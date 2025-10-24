@@ -1,4 +1,4 @@
-import { MapPin, Phone, Mail, Clock, Instagram, MessageCircle } from 'lucide-react';
+import { MapPin, Phone, Mail, Clock, Instagram, MessageCircle, Truck, Pencil } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
 import { Textarea } from '@/components/ui/textarea';
@@ -15,7 +15,12 @@ const Contact = () => {
         message: '',
     });
 
-    const whatsappLink = `https://wa.me/${BUSINESS_INFO.whatsappNumber}?text=${encodeURIComponent(WHATSAPP_MESSAGE)}`;
+    const whatsappLinkShipping = `https://wa.me/${BUSINESS_INFO.contact.shipping.whatsapp}?text=${encodeURIComponent(
+        WHATSAPP_MESSAGE,
+    )}`;
+    const whatsappLinkStationery = `https://wa.me/${BUSINESS_INFO.contact.stationery.whatsapp}?text=${encodeURIComponent(
+        WHATSAPP_MESSAGE,
+    )}`;
 
     const handleSubmit = (e: React.FormEvent) => {
         e.preventDefault();
@@ -46,14 +51,14 @@ const Contact = () => {
             content: `${BUSINESS_INFO.address.street}, ${BUSINESS_INFO.address.neighborhood}\n${BUSINESS_INFO.address.city}, ${BUSINESS_INFO.address.state}, ${BUSINESS_INFO.address.country}`,
         },
         {
-            icon: Phone,
-            title: 'Teléfono',
-            content: BUSINESS_INFO.phone,
+            icon: Truck,
+            title: 'Envíos (Teléfono y Email)',
+            content: `${BUSINESS_INFO.contact.shipping.phone}\n${BUSINESS_INFO.contact.shipping.email}`,
         },
         {
-            icon: Mail,
-            title: 'Email',
-            content: BUSINESS_INFO.email,
+            icon: Pencil,
+            title: 'Papelería (Teléfono y Email)',
+            content: `${BUSINESS_INFO.contact.stationery.phone}\n${BUSINESS_INFO.contact.stationery.email}`,
         },
         {
             icon: Clock,
@@ -100,11 +105,19 @@ const Contact = () => {
                                 <h3 className="font-semibold text-foreground mb-4">Síguenos y contáctanos</h3>
                                 <div className="flex flex-col sm:flex-row gap-3">
                                     <Button asChild className="flex-1">
-                                        <a href={whatsappLink} target="_blank" rel="noopener noreferrer">
-                                            <MessageCircle className="mr-2 h-5 w-5" />
-                                            WhatsApp
+                                        <a href={whatsappLinkShipping} target="_blank" rel="noopener noreferrer">
+                                            <Truck className="mr-2 h-5 w-5" />
+                                            WhatsApp Envíos
                                         </a>
                                     </Button>
+                                    <Button asChild className="flex-1">
+                                        <a href={whatsappLinkStationery} target="_blank" rel="noopener noreferrer">
+                                            <Pencil className="mr-2 h-5 w-5" />
+                                            WhatsApp Papelería
+                                        </a>
+                                    </Button>
+                                </div>
+                                <div className="flex flex-col sm:flex-row gap-3 mt-3">
                                     <Button asChild variant="outline" className="flex-1">
                                         <a
                                             href={BUSINESS_INFO.social.instagram}
@@ -202,3 +215,4 @@ const Contact = () => {
 };
 
 export default Contact;
+

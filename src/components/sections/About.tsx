@@ -1,5 +1,5 @@
 import { CheckCircle } from 'lucide-react';
-import storeFront from '@/assets/store-front.jpg';
+import storeFront from '@/assets/bussines-front.jpeg';
 
 const About = () => {
     return (

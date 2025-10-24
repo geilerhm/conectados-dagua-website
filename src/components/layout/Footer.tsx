@@ -1,4 +1,4 @@
-import { Package, Instagram, Mail, Phone } from 'lucide-react';
+import { Package, Instagram, Mail, Phone, Truck, Pencil } from 'lucide-react';
 import { BUSINESS_INFO } from '@/constants/contact';
 
 const Footer = () => {
@@ -26,16 +26,22 @@ const Footer = () => {
                     {/* Contact Info */}
                     <div>
                         <h4 className="font-semibold mb-4">Contacto</h4>
-                        <div className="space-y-2 text-sm text-background/80">
+                        <div className="space-y-3 text-sm text-background/80">
                             <p className="flex items-start gap-2">
-                                <Phone className="h-4 w-4 mt-0.5 shrink-0" />
-                                <span>{BUSINESS_INFO.phone}</span>
+                                <Truck className="h-4 w-4 mt-0.5 shrink-0" />
+                                <span>
+                                    <strong>Envíos:</strong> {BUSINESS_INFO.contact.shipping.phone} /{' '}
+                                    {BUSINESS_INFO.contact.shipping.email}
+                                </span>
                             </p>
                             <p className="flex items-start gap-2">
-                                <Mail className="h-4 w-4 mt-0.5 shrink-0" />
-                                <span>{BUSINESS_INFO.email}</span>
+                                <Pencil className="h-4 w-4 mt-0.5 shrink-0" />
+                                <span>
+                                    <strong>Papelería:</strong> {BUSINESS_INFO.contact.stationery.phone} /{' '}
+                                    {BUSINESS_INFO.contact.stationery.email}
+                                </span>
                             </p>
-                            <p className="text-background/80">
+                            <p className="text-background/80 mt-2">
                                 {BUSINESS_INFO.address.street}, {BUSINESS_INFO.address.neighborhood}
                                 <br />
                                 {BUSINESS_INFO.address.city}, {BUSINESS_INFO.address.state},{' '}
@@ -68,8 +74,7 @@ const Footer = () => {
 
                 <div className="pt-8 border-t border-background/20 text-center text-sm text-background/70">
                     <p>
-                        © {currentYear} {BUSINESS_INFO.name} - {BUSINESS_INFO.legalName}. Todos los derechos
-                        reservados.
+                        © {currentYear} {BUSINESS_INFO.name} - {BUSINESS_INFO.legalName}. Todos los derechos reservados.
                     </p>
                     <p className="mt-2">
                         <a href={`https://${BUSINESS_INFO.website}`} className="hover:text-primary transition-smooth">

@@ -1,6 +1,6 @@
-import { MessageCircle, ArrowRight } from 'lucide-react';
+import { MessageCircle, ArrowRight, Truck, Pencil } from 'lucide-react';
 import { Button } from '@/components/ui/button';
-import heroImage from '@/assets/hero-image.jpg';
+import heroImage from '@/assets/bussines-into.jpeg';
 import { BUSINESS_INFO, WHATSAPP_MESSAGE } from '@/constants/contact';
 /**
  *
@@ -8,7 +8,12 @@ import { BUSINESS_INFO, WHATSAPP_MESSAGE } from '@/constants/contact';
  * @returns {JSX.Element} The Hero section JSX element.
  */
 const Hero = () => {
-    const whatsappLink = `https://wa.me/${BUSINESS_INFO.whatsappNumber}?text=${encodeURIComponent(WHATSAPP_MESSAGE)}`;
+    const whatsappLinkShipping = `https://wa.me/${BUSINESS_INFO.contact.shipping.whatsapp}?text=${encodeURIComponent(
+        WHATSAPP_MESSAGE,
+    )}`;
+    const whatsappLinkStationery = `https://wa.me/${BUSINESS_INFO.contact.stationery.whatsapp}?text=${encodeURIComponent(
+        WHATSAPP_MESSAGE,
+    )}`;
 
     return (
         <section
@@ -52,9 +57,19 @@ const Hero = () => {
                             size="lg"
                             className="w-full sm:w-auto text-base font-semibold bg-primary text-foreground hover:bg-primary-hover shadow-lg hover:shadow-xl transition-smooth"
                         >
-                            <a href={whatsappLink} target="_blank" rel="noopener noreferrer">
-                                <MessageCircle className="mr-2 h-5 w-5" />
-                                Contactar por WhatsApp
+                            <a href={whatsappLinkShipping} target="_blank" rel="noopener noreferrer">
+                                <Truck className="mr-2 h-5 w-5" />
+                                WhatsApp Envíos
+                            </a>
+                        </Button>
+                        <Button
+                            asChild
+                            size="lg"
+                            className="w-full sm:w-auto text-base font-semibold bg-primary text-foreground hover:bg-primary-hover shadow-lg hover:shadow-xl transition-smooth"
+                        >
+                            <a href={whatsappLinkStationery} target="_blank" rel="noopener noreferrer">
+                                <Pencil className="mr-2 h-5 w-5" />
+                                WhatsApp Papelería
                             </a>
                         </Button>
                     </div>
@@ -75,8 +90,9 @@ const Hero = () => {
                             </p>
                         </div>
                         <div>
-                            <p className="font-semibold mb-1">Teléfono</p>
-                            <p className="text-white/90">{BUSINESS_INFO.phone}</p>
+                            <p className="font-semibold mb-1">Teléfonos</p>
+                            <p className="text-white/90">Envíos: {BUSINESS_INFO.contact.shipping.phone}</p>
+                            <p className="text-white/90">Papelería: {BUSINESS_INFO.contact.stationery.phone}</p>
                         </div>
                     </div>
                 </div>
