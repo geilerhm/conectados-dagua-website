@@ -16,7 +16,7 @@ const Hero = () => {
           alt="Interior de Papelería Conectad@s.com"
           className="w-full h-full object-cover"
         />
-        <div className="absolute inset-0 bg-gradient-to-br from-primary/90 via-primary/80 to-primary/70"></div>
+        <div className="absolute inset-0 bg-gradient-to-br from-foreground/85 via-foreground/75 to-foreground/70"></div>
       </div>
 
       {/* Content */}
@@ -45,7 +45,7 @@ const Hero = () => {
             <Button
               asChild
               size="lg"
-              className="w-full sm:w-auto text-base font-semibold bg-white text-primary hover:bg-white/90 shadow-lg hover:shadow-xl transition-smooth"
+              className="w-full sm:w-auto text-base font-semibold bg-primary text-foreground hover:bg-primary-hover shadow-lg hover:shadow-xl transition-smooth"
             >
               <a href={whatsappLink} target="_blank" rel="noopener noreferrer">
                 <MessageCircle className="mr-2 h-5 w-5" />
