@@ -21,12 +21,14 @@ const Services = () => {
                                 key={index}
                                 className="border-2 hover:border-primary transition-smooth hover:shadow-primary animate-fade-in group"
                             >
-                                <CardContent className="p-6">
-                                    <div className="mb-4 inline-flex p-3 rounded-xl bg-secondary group-hover:bg-primary transition-smooth">
+                                <CardContent className="p-6 flex items-start gap-4">
+                                    <div className="shrink-0 inline-flex p-3 rounded-xl bg-secondary group-hover:bg-primary transition-smooth">
                                         <Icon className="h-8 w-8 text-primary group-hover:text-white transition-smooth" />
                                     </div>
-                                    <h3 className="text-xl font-semibold mb-2 text-foreground">{service.title}</h3>
-                                    <p className="text-muted-foreground leading-relaxed">{service.description}</p>
+                                    <div>
+                                        <h3 className="text-xl font-semibold mb-2 text-foreground">{service.title}</h3>
+                                        <p className="text-muted-foreground leading-relaxed">{service.description}</p>
+                                    </div>
                                 </CardContent>
                             </Card>
                         );

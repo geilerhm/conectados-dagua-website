@@ -1,4 +1,4 @@
-import { Package, Instagram, Mail, Phone, Truck, Pencil } from 'lucide-react';
+import { Package, Instagram, Mail, Phone, Truck, Pencil, MapPin } from 'lucide-react';
 import { BUSINESS_INFO } from '@/constants/contact';
 
 const Footer = () => {
@@ -30,22 +30,23 @@ const Footer = () => {
                             <p className="flex items-start gap-2">
                                 <Truck className="h-4 w-4 mt-0.5 shrink-0" />
                                 <span>
-                                    <strong>Envíos:</strong> {BUSINESS_INFO.contact.shipping.phone} /{' '}
-                                    {BUSINESS_INFO.contact.shipping.email}
+                                    <strong>Envíos:</strong> {BUSINESS_INFO.contact.shipping.phone} / {BUSINESS_INFO.contact.shipping.email}
                                 </span>
                             </p>
                             <p className="flex items-start gap-2">
                                 <Pencil className="h-4 w-4 mt-0.5 shrink-0" />
                                 <span>
-                                    <strong>Papelería:</strong> {BUSINESS_INFO.contact.stationery.phone} /{' '}
-                                    {BUSINESS_INFO.contact.stationery.email}
+                                    <strong>Papelería:</strong> {BUSINESS_INFO.contact.stationery.phone} / {BUSINESS_INFO.contact.stationery.email}
                                 </span>
                             </p>
-                            <p className="text-background/80 mt-2">
-                                {BUSINESS_INFO.address.street}, {BUSINESS_INFO.address.neighborhood}
-                                <br />
-                                {BUSINESS_INFO.address.city}, {BUSINESS_INFO.address.state},{' '}
-                                {BUSINESS_INFO.address.country}
+                            <p className="flex items-start gap-2 text-background/80 mt-2">
+                                <MapPin className="h-4 w-4 mt-0.5 shrink-0" />
+                                <span>
+                                    {BUSINESS_INFO.address.street}, {BUSINESS_INFO.address.neighborhood}
+                                    <br />
+                                    {BUSINESS_INFO.address.city}, {BUSINESS_INFO.address.state},{' '}
+                                    {BUSINESS_INFO.address.country}
+                                </span>
                             </p>
                         </div>
                     </div>
