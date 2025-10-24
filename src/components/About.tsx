@@ -21,14 +21,14 @@ const About = () => {
               Sobre Nosotros
             </h2>
             <p className="text-lg text-muted-foreground mb-6 leading-relaxed">
-              <span className="font-semibold text-foreground">Papelería Conectad@s.com</span> (Conectados Dagua S&A) 
+              <span className="font-semibold text-foreground">Conectad@s.com</span> (Conectados Dagua S&A) 
               es tu aliado local de confianza en Dagua, Valle del Cauca. Somos distribuidores oficiales de{" "}
               <span className="font-semibold text-primary">Inter Rapidísimo</span>, 
               ofreciendo servicios de envío y recepción de paquetes a nivel nacional.
             </p>
             <p className="text-lg text-muted-foreground mb-8 leading-relaxed">
               Además de nuestros servicios de mensajería, contamos con una amplia gama de 
-              productos de papelería, útiles escolares, servicios de impresión y mucho más. 
+              productos de oficina, útiles escolares, servicios de impresión, recargas, pagos y mucho más. 
               Nos enorgullece servir a nuestra comunidad con atención personalizada y profesional.
             </p>
 
@@ -48,7 +48,7 @@ const About = () => {
               <div className="flex items-start gap-3">
                 <CheckCircle className="h-6 w-6 text-primary shrink-0 mt-0.5" />
                 <p className="text-foreground">
-                  <span className="font-semibold">Servicios completos</span> - Papelería, impresiones, recargas y más
+                  <span className="font-semibold">Servicios completos</span> - Oficina, impresiones, recargas y más
                 </p>
               </div>
             </div>

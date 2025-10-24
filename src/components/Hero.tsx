@@ -27,7 +27,7 @@ const Hero = () => {
           </h1>
           <p className="text-lg md:text-xl lg:text-2xl mb-8 text-white/95 font-light animate-fade-in max-w-2xl mx-auto">
             Envíos rápidos y seguros con Inter Rapidísimo. 
-            Atención cercana y servicios completos de papelería.
+            Tu aliado local para todo lo que necesitas.
           </p>
 
           <div className="flex flex-col sm:flex-row gap-4 justify-center items-center animate-fade-in">

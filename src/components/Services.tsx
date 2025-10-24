@@ -10,7 +10,7 @@ const Services = () => {
     },
     {
       icon: Pencil,
-      title: "Papelería y Útiles Escolares",
+      title: "Artículos de Oficina y Escolares",
       description: "Amplio surtido de productos escolares, artículos de oficina y materiales para tus proyectos.",
     },
     {
@@ -44,7 +44,7 @@ const Services = () => {
           </h2>
           <p className="text-lg text-muted-foreground">
             Ofrecemos una amplia gama de servicios para satisfacer todas tus necesidades 
-            de envíos, papelería y más en Dagua.
+            en Dagua: envíos, productos de oficina, impresiones, recargas y más.
           </p>
         </div>
 

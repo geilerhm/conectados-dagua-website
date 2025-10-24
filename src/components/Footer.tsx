@@ -17,7 +17,7 @@ const Footer = () => {
               </div>
             </div>
             <p className="text-background/80 text-sm leading-relaxed">
-              Tu aliado local en Dagua para envíos, papelería y servicios de oficina.
+              Tu aliado local en Dagua para envíos, servicios de oficina, impresiones y más.
               Distribuidores oficiales de Inter Rapidísimo.
             </p>
           </div>
