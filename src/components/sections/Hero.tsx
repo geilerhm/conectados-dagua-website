@@ -2,7 +2,11 @@ import { MessageCircle, ArrowRight } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import heroImage from '@/assets/hero-image.jpg';
 import { BUSINESS_INFO, WHATSAPP_MESSAGE } from '@/constants/contact';
-
+/**
+ *
+ * @description Hero section component for the homepage.
+ * @returns {JSX.Element} The Hero section JSX element.
+ */
 const Hero = () => {
     const whatsappLink = `https://wa.me/${BUSINESS_INFO.whatsappNumber}?text=${encodeURIComponent(WHATSAPP_MESSAGE)}`;
 
