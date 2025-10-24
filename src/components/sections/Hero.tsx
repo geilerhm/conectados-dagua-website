@@ -1,11 +1,10 @@
 import { MessageCircle, ArrowRight } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import heroImage from "@/assets/hero-image.jpg";
+import { BUSINESS_INFO, WHATSAPP_MESSAGE } from "@/constants/contact";
 
 const Hero = () => {
-  const whatsappNumber = "573205890820";
-  const whatsappMessage = "Hola, me gustaría obtener más información sobre sus servicios.";
-  const whatsappLink = `https://wa.me/${whatsappNumber}?text=${encodeURIComponent(whatsappMessage)}`;
+  const whatsappLink = `https://wa.me/${BUSINESS_INFO.whatsappNumber}?text=${encodeURIComponent(WHATSAPP_MESSAGE)}`;
 
   return (
     <section id="inicio" className="relative min-h-screen flex items-center justify-center overflow-hidden pt-16 md:pt-20">
@@ -58,15 +57,15 @@ const Hero = () => {
           <div className="mt-12 pt-8 border-t border-white/20 grid grid-cols-1 md:grid-cols-3 gap-6 text-sm">
             <div>
               <p className="font-semibold mb-1">Horario</p>
-              <p className="text-white/90">Lunes a Sábado, 8:00 AM - 6:00 PM</p>
+              <p className="text-white/90">{BUSINESS_INFO.hours.weekdays}, {BUSINESS_INFO.hours.time}</p>
             </div>
             <div>
               <p className="font-semibold mb-1">Ubicación</p>
-              <p className="text-white/90">Calle 10 #21-05, Dagua, Valle</p>
+              <p className="text-white/90">{BUSINESS_INFO.address.street}, {BUSINESS_INFO.address.city}, {BUSINESS_INFO.address.state}</p>
             </div>
             <div>
               <p className="font-semibold mb-1">Teléfono</p>
-              <p className="text-white/90">+57 320 589 0820</p>
+              <p className="text-white/90">{BUSINESS_INFO.phone}</p>
             </div>
           </div>
         </div>

@@ -5,6 +5,7 @@ import { Textarea } from "@/components/ui/textarea";
 import { Card, CardContent } from "@/components/ui/card";
 import { useToast } from "@/hooks/use-toast";
 import { useState } from "react";
+import { BUSINESS_INFO, WHATSAPP_MESSAGE } from "@/constants/contact";
 
 const Contact = () => {
   const { toast } = useToast();
@@ -14,9 +15,7 @@ const Contact = () => {
     message: "",
   });
 
-  const whatsappNumber = "573205890820";
-  const whatsappMessage = "Hola, me gustaría obtener más información.";
-  const whatsappLink = `https://wa.me/${whatsappNumber}?text=${encodeURIComponent(whatsappMessage)}`;
+  const whatsappLink = `https://wa.me/${BUSINESS_INFO.whatsappNumber}?text=${encodeURIComponent(WHATSAPP_MESSAGE)}`;
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
@@ -44,22 +43,22 @@ const Contact = () => {
     {
       icon: MapPin,
       title: "Dirección",
-      content: "Calle 10 #21-05, Barrio Ricaurte\nDagua, Valle del Cauca, Colombia",
+      content: `${BUSINESS_INFO.address.street}, ${BUSINESS_INFO.address.neighborhood}\n${BUSINESS_INFO.address.city}, ${BUSINESS_INFO.address.state}, ${BUSINESS_INFO.address.country}`,
     },
     {
       icon: Phone,
       title: "Teléfono",
-      content: "+57 320 589 0820",
+      content: BUSINESS_INFO.phone,
     },
     {
       icon: Mail,
       title: "Email",
-      content: "conectadosdagua@gmail.com",
+      content: BUSINESS_INFO.email,
     },
     {
       icon: Clock,
       title: "Horario",
-      content: "Lunes a Sábado\n8:00 AM - 6:00 PM",
+      content: `${BUSINESS_INFO.hours.weekdays}\n${BUSINESS_INFO.hours.time}`,
     },
   ];
 
@@ -110,7 +109,7 @@ const Contact = () => {
                   </Button>
                   <Button asChild variant="outline" className="flex-1">
                     <a
-                      href="https://www.instagram.com/papeleria_conectados"
+                      href={BUSINESS_INFO.social.instagram}
                       target="_blank"
                       rel="noopener noreferrer"
                     >
@@ -125,14 +124,14 @@ const Contact = () => {
             {/* Google Maps */}
             <div className="rounded-2xl overflow-hidden shadow-primary h-64 lg:h-80">
               <iframe
-                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3980.123456789!2d-76.685!3d3.657!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zM8KwMzknMjUuMiJOIDc2wrA0MScwNi4wIlc!5e0!3m2!1ses!2sco!4v1234567890"
+                src={BUSINESS_INFO.googleMapsEmbed}
                 width="100%"
                 height="100%"
                 style={{ border: 0 }}
                 allowFullScreen
                 loading="lazy"
                 referrerPolicy="no-referrer-when-downgrade"
-                title="Ubicación de Papelería Conectad@s.com"
+                title={`Ubicación de ${BUSINESS_INFO.name}`}
               ></iframe>
             </div>
           </div>
