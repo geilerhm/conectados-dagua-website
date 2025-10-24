@@ -78,7 +78,7 @@ const Contact = () => {
                 </div>
 
                 <div className="grid lg:grid-cols-2 gap-12 max-w-6xl mx-auto">
-                    {/* Contact Info */}
+                    {/* Column 1: Contact Info Cards */}
                     <div className="space-y-6 animate-fade-in">
                         {contactInfo.map((info, index) => {
                             const Icon = info.icon;
@@ -98,7 +98,10 @@ const Contact = () => {
                                 </Card>
                             );
                         })}
+                    </div>
 
+                    {/* Column 2: Social Links and Google Maps */}
+                    <div className="space-y-6 animate-fade-in">
                         {/* Social Links */}
                         <Card className="border-2 border-primary bg-primary/5">
                             <CardContent className="p-6">
@@ -145,68 +148,6 @@ const Contact = () => {
                                 title={`Ubicación de ${BUSINESS_INFO.name}`}
                             ></iframe>
                         </div>
-                    </div>
-
-                    {/* Contact Form */}
-                    <div className="animate-fade-in">
-                        <Card className="border-2">
-                            <CardContent className="p-6 md:p-8">
-                                <h3 className="text-2xl font-semibold mb-6 text-foreground">Envíanos un mensaje</h3>
-                                <form onSubmit={handleSubmit} className="space-y-4">
-                                    <div>
-                                        <label
-                                            htmlFor="name"
-                                            className="block text-sm font-medium mb-2 text-foreground"
-                                        >
-                                            Nombre completo
-                                        </label>
-                                        <Input
-                                            id="name"
-                                            type="text"
-                                            placeholder="Tu nombre"
-                                            value={formData.name}
-                                            onChange={(e) => setFormData({ ...formData, name: e.target.value })}
-                                            className="w-full"
-                                        />
-                                    </div>
-                                    <div>
-                                        <label
-                                            htmlFor="email"
-                                            className="block text-sm font-medium mb-2 text-foreground"
-                                        >
-                                            Email
-                                        </label>
-                                        <Input
-                                            id="email"
-                                            type="email"
-                                            placeholder="tu@email.com"
-                                            value={formData.email}
-                                            onChange={(e) => setFormData({ ...formData, email: e.target.value })}
-                                            className="w-full"
-                                        />
-                                    </div>
-                                    <div>
-                                        <label
-                                            htmlFor="message"
-                                            className="block text-sm font-medium mb-2 text-foreground"
-                                        >
-                                            Mensaje
-                                        </label>
-                                        <Textarea
-                                            id="message"
-                                            placeholder="¿En qué podemos ayudarte?"
-                                            rows={5}
-                                            value={formData.message}
-                                            onChange={(e) => setFormData({ ...formData, message: e.target.value })}
-                                            className="w-full resize-none"
-                                        />
-                                    </div>
-                                    <Button type="submit" className="w-full shadow-primary" size="lg">
-                                        Enviar mensaje
-                                    </Button>
-                                </form>
-                            </CardContent>
-                        </Card>
                     </div>
                 </div>
             </div>
