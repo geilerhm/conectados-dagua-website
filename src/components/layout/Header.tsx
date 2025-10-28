@@ -18,10 +18,10 @@ const Header = () => {
                 <div className="flex items-center justify-between h-16 md:h-20">
                     {/* Logo */}
                     <a href="#inicio" className="flex items-center gap-2 transition-smooth hover:opacity-80">
-                        <img src={logo} alt="Conectad@s.com Logo" className="h-8 w-8 rounded-full object-cover" />
+                        <img src={logo} alt="Conectad@s.com S&A Logo" className="h-8 w-8 rounded-full object-cover" />
                         <div className="flex flex-col">
                             <span className="font-bold text-base md:text-lg text-foreground leading-tight">
-                                Conectad@s.com
+                                Conectad@s.com S&A
                             </span>
                             <span className="text-xs text-muted-foreground hidden sm:block">
                                 Dagua, Valle del Cauca

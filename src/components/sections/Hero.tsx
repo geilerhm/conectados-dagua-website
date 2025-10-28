@@ -9,11 +9,11 @@ import { BUSINESS_INFO, WHATSAPP_MESSAGE } from '@/constants/contact';
  */
 const Hero = () => {
     const whatsappLinkShipping = `https://wa.me/${BUSINESS_INFO.contact.shipping.whatsapp}?text=${encodeURIComponent(
-        WHATSAPP_MESSAGE,
+        WHATSAPP_MESSAGE
     )}`;
-    const whatsappLinkStationery = `https://wa.me/${BUSINESS_INFO.contact.stationery.whatsapp}?text=${encodeURIComponent(
-        WHATSAPP_MESSAGE,
-    )}`;
+    const whatsappLinkStationery = `https://wa.me/${
+        BUSINESS_INFO.contact.stationery.whatsapp
+    }?text=${encodeURIComponent(WHATSAPP_MESSAGE)}`;
 
     return (
         <section
@@ -24,7 +24,7 @@ const Hero = () => {
             <div className="absolute inset-0 z-0">
                 <img
                     src={heroImage}
-                    alt="Interior de Papelería Conectad@s.com"
+                    alt="Interior de Papelería Conectad@s.com S&A"
                     className="w-full h-full object-cover"
                 />
                 <div className="absolute inset-0 bg-gradient-to-br from-foreground/85 via-foreground/75 to-foreground/70"></div>

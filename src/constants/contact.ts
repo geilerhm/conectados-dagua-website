@@ -1,5 +1,5 @@
 export const BUSINESS_INFO = {
-    name: 'Conectad@s.com',
+    name: 'Conectad@s.com S&A',
     legalName: 'Conectados.com, S&A',
     contact: {
         shipping: {
