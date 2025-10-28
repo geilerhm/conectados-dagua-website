@@ -1,7 +1,7 @@
 import { Package, Menu, X } from 'lucide-react';
 import { useState } from 'react';
 import { Button } from '@/components/ui/button';
-
+import logo from '@/assets/logo.jpeg';
 const Header = () => {
     const [isMenuOpen, setIsMenuOpen] = useState(false);
 
@@ -18,7 +18,7 @@ const Header = () => {
                 <div className="flex items-center justify-between h-16 md:h-20">
                     {/* Logo */}
                     <a href="#inicio" className="flex items-center gap-2 transition-smooth hover:opacity-80">
-                        <Package className="h-6 w-6 md:h-8 md:w-8 text-primary" />
+                        <img src={logo} alt="Conectad@s.com Logo" className="h-8 w-8 rounded-full object-cover" />
                         <div className="flex flex-col">
                             <span className="font-bold text-base md:text-lg text-foreground leading-tight">
                                 Conectad@s.com
