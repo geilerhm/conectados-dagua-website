@@ -3,13 +3,13 @@ export const BUSINESS_INFO = {
     legalName: 'Conectados.com, S&A',
     contact: {
         shipping: {
-            phone: '+57 320 589 0820',
-            whatsapp: '573205890820',
+            phone: '+57 311 3751 178',
+            whatsapp: '3113751178',
             email: 'interdagua@gmail.com',
         },
         stationery: {
-            phone: '+57 320 589 0821', //TODO: Replace with the correct phone number
-            whatsapp: '573205890821', //TODO: Replace with the correct whatsapp number
+            phone: '+57 320 589 0820', //TODO: Replace with the correct phone number
+            whatsapp: '573205890820', //TODO: Replace with the correct whatsapp number
             email: 'conectados.dagua12@gmail.com',
         },
     },
